@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 server.use(cors());
 server.use(middlewares);
 
-server.get("/", (req, res) => {
+server.get("/db", (req, res) => {
   const db = JSON.parse(fs.readFileSync("./db.json", "utf-8"));
   res.json(db);
 });
